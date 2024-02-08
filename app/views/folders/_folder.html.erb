@@ -1,0 +1,13 @@
+<%= turbo_frame_tag folder do %>
+  <section class="flex flex-col gap-2">
+    <div>
+      <h2><%= link_to folder.title, folder_path(folder), data: { turbo_frame: "_top"} %></h2>
+      <p><%= folder.description %></p>
+    </div>
+
+    <div>
+      <%= link_to "Edit", edit_folder_path(folder), class: "bg-blue-600 p-2 rounded text-white"%>
+      <%= link_to "Delete", folder_path(folder), class: "bg-red-600 p-2 rounded text-white", data: { turbo_method: :delete }%>
+    </div>
+  </section>
+<% end %>

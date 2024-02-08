@@ -11,8 +11,3 @@
 }
 
 */
-
-
-.visible {
-  @apply visible ease-in duration-300
-}

@@ -1,8 +1,5 @@
 <% @images.each do |image|%>
-  <%= tag.section class: "my-5 ", data: { controller: 'images' }  do %>
-    <%= image_tag image.url, class: "", alt: image.title,  data: { action: 'click->images#getUrl' } %>
-    <p><%= image.title %></p>
-  <% end%>
-<% end%>
-
-
+  <%= tag.section(class: "my-5 ", data: { controller: 'images', action: '', images_loading_class: "disabled", images_id_value: image.id  })  do %>
+    <%= image_tag image.url, class: "", alt: image.title, data: { action: 'click->images#getUrl', images_target: 'image' } %>
+  <% end %>
+<% end %>

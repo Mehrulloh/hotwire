@@ -1,0 +1,16 @@
+<%= turbo_frame_tag folder do %>
+  <%= form_with model: folder do |form| %>
+    <%#=  render "shared/errors", object: @answer %>
+    <div class="flex flex-col gap-4 w-full my-4">
+      <div class="flex flex-col gap-2">
+        <%= form.label :title, class: "w-4/12" %>
+        <%= form.text_area :title, placeholder: "Title", class: "", required: true %>
+        <%= form.label :description, class: "w-4/12" %>
+        <%= form.text_area :description, placeholder: "description", class: "", required: true %>
+      </div>
+      <div class="mt-2">
+        <%= form.submit "Submit", class: "p-2 rounded bg-blue-600 text-white" %>
+      </div>
+    </div>
+  <% end %>
+<% end %>
